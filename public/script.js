@@ -19,6 +19,7 @@ new Vue({
              if (this.cart[i].id === item.id){
                  found = true;
                  this.cart[i].qty++;
+                 break;
              }
          }
          if(!found){
@@ -31,10 +32,18 @@ new Vue({
          } 
      },
      inc: function(item) {
-         console.log('inc');
+         item.qty++;
+         this.total += PRICE;
      },
      dec: function(item){
-         console.log('dec');
+         item.qty--;
+         this.total -= PRICE;
+         if (item.qty <= 0) {
+             for(let i=0; i < this.cart.length; i++) {
+                 this.cart.splice(i, 1);
+                 break;
+             }
+         }
      }  
    },
    filters: {
