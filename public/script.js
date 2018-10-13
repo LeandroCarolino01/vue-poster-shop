@@ -13,7 +13,7 @@ new Vue({
    },
    methods: {
        onSubmit: function() {
-           console.log(this.search);
+           console.log(this.$http);
        },
      addItem: function(index) {
          this.total += 9.99;
