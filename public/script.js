@@ -27,11 +27,19 @@ new Vue({
                 title: item.title,
                 qty: 1,
                 price: PRICE
-             })
-         }
-         //this.cart.push(this.items[index]);
-        
-         
+             });
+         } 
+     },
+     inc: function(item) {
+         console.log('inc');
+     },
+     dec: function(item){
+         console.log('dec');
      }  
+   },
+   filters: {
+       currency: function(price){
+            return '$'.concat(price.toFixed(2));
+       }
    }
 });
