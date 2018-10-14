@@ -12,12 +12,12 @@ new Vue({
        search: ''
    },
    methods: {
-       onSubmit: function() {
-           this.$http
-           .get('/search/'.concat(this.search))
-           .then(function(res) {
-             console.log(res);
-           });      
+        onSubmit: function() {
+            this.$http
+            .get('/search/'.concat(this.search))
+            .then(function(res) {
+                console.log(res);
+            });   
          },
      addItem: function(index) {
          this.total += 9.99;

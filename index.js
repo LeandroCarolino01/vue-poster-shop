@@ -39,5 +39,5 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 server.listen(process.env.PORT, function () {
-  console.log('Listening on port '.concat('3000'))
+  console.log('Listening on port '.concat(process.env.PORT))
 });
